@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Chowdeck.iml" filepath="$PROJECT_DIR$/Chowdeck.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Order-service/Order-service.iml" filepath="$PROJECT_DIR$/Order-service/Order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Payment-service/Payment-service.iml" filepath="$PROJECT_DIR$/Payment-service/Payment-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Restaurant-service/Restaurant-service.iml" filepath="$PROJECT_DIR$/Restaurant-service/Restaurant-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User-service/User-service.iml" filepath="$PROJECT_DIR$/User-service/User-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Auth-service/auth-service.iml" filepath="$PROJECT_DIR$/Auth-service/auth-service.iml" />
+    </modules>
+  </component>
+</project>

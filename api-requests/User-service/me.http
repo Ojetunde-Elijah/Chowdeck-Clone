@@ -1,0 +1,2 @@
+GET localhost:7006/api/v1/users/me
+X-User-Id: d2e27193-d18e-47c4-9eb8-7b729daf4622

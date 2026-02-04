@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="User-service" />
+        <module name="Notification-service" />
+        <module name="Api-gateway" />
+        <module name="auth-service" />
+        <module name="chowdeck" />
+        <module name="infrastructure" />
+        <module name="Kitchen-service" />
+        <module name="Order-service" />
+        <module name="Delivery-service" />
+        <module name="Payment-service" />
+        <module name="Restaurant-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Accounting-Service" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Accounting-Service" options="-parameters" />
+      <module name="Api-gateway" options="-parameters" />
+      <module name="Delivery-service" options="-parameters" />
+      <module name="Kitchen-service" options="-parameters" />
+      <module name="Notification-service" options="-parameters" />
+      <module name="Order-service" options="-parameters" />
+      <module name="Payment-service" options="-parameters" />
+      <module name="Restaurant-service" options="-parameters" />
+      <module name="User-service" options="-parameters" />
+      <module name="auth-service" options="-parameters" />
+      <module name="infrastructure" options="" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,17 @@
+POST http://Chowde-Publi-mIhb1Tu9w3FW-408573748.us-east-1.elb.amazonaws.com/api/orders/place
+X-User-Id: 5e003b7c-13c1-442b-a7e2-ef01320c0e0a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvamUzNDNAdGVzdC5jb20iLCJyb2xlIjoiQ3VzdG9tIiwiaWF0IjoxNzcwMjMxOTg2LCJleHAiOjE3NzAyNjc5ODZ9.q2m1v8o4_b68eHmjScC-kLK0uw3MsPWG8EuAtYVbiW0
+
+
+{
+  "restaurantId": "5e003b7c-13c1-442b-a7e2-ef01320c0e0a",
+  "userEmail": "customer@example.com",
+  "deliveryAddress": "123 Herbert Macaulay Way, Yaba",
+  "items": [
+    {
+      "menuItemId": 1,
+      "quantity": 2
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# CDK output
+**/cdk.out/
+.cdk.staging/
+
+# IDE files
+.idea/
+*.iml
+
+# Java build files
+target/
+*.class
+
+# Secrets (Just in case)
+.env

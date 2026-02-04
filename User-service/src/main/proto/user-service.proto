@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_package = "userservice";
+option java_multiple_files = true;
+
+service UserProfileService {
+  rpc CreateProfile (UserProfileRequest) returns (UserProfileResponse);
+}
+
+message UserProfileRequest {
+  string userId = 1;
+  string firstName = 2;
+  string lastName = 3;
+  string phone = 4;
+}
+
+message UserProfileResponse {
+  bool success = 1;
+  string message = 2;
+}

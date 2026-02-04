@@ -1,0 +1,11 @@
+POST http://Chowde-Publi-mIhb1Tu9w3FW-408573748.us-east-1.elb.amazonaws.com/auth/signup
+Content-Type: application/json
+
+{
+  "email": "oje343@test.com",
+  "password": "pass0909031",
+  "firstName": "miracl22",
+  "lastName": "Ojetue13",
+  "role": "Custom",
+  "phone": 13
+}

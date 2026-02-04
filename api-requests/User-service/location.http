@@ -1,0 +1,12 @@
+POST http://localhost:7006/api/v1/users/location
+Content-Type: application/json
+X-User-Id: d2e27193-d18e-47c4-9eb8-7b729daf4622
+
+{
+  "formattedAddress": "123 Chowdeck Way, Lagos, Nigeria",
+  "latitude": 6.5244,
+  "longitude": 3.3792,
+  "label": "Home",
+  "isDefault": true,
+  "apartmentNumber": "Suite 4"
+}

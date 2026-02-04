@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "order_service";
+
+package order;
+
+message PaymentStatusRequest {
+  string order_id = 1;
+  string status = 2; // e.g., "PAID"
+}
+
+message PaymentStatusResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+service OrderInternalService {
+  rpc UpdateOrderStatus(PaymentStatusRequest) returns (PaymentStatusResponse);
+}

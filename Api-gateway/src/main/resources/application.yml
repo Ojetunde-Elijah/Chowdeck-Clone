@@ -1,0 +1,84 @@
+server:
+  port: 4004
+
+spring:
+  cloud:
+    compatibility-verifier:
+      enabled: false
+    gateway:
+      server:
+        webflux:
+          routes:
+            # --- AUTH SERVICE ---
+                    - id: auth-service-route
+                      uri: http://auth.chowdeck.local:7005
+                      predicates:
+                        - Path=/auth/**
+                      filters:
+                        - StripPrefix=1
+
+                    # --- USER SERVICE ---
+                    - id: user-service-route
+                      uri: http://user.chowdeck.local:7090
+                      predicates:
+                        - Path=/api/v1/users/**
+                      filters:
+                        - StripPrefix=1
+                        - JwtValidation # Ensure this filter is defined in your Java code
+
+                    # --- RESTAURANT SERVICE ---
+                    - id: restaurant-service-route
+                      uri: http://restaurant.chowdeck.local:7007
+                      predicates:
+                        - Path=/api/restaurants/**
+                      filters:
+                        - StripPrefix=1
+                        - JwtValidation
+                    # --- PAYMENT SERVICE ---
+                    - id: payment-service-route
+                      uri: http://payment.chowdeck.local:7011
+                      predicates:
+                        - Path=/api/payments/**
+                      filters:
+                        - StripPrefix=1
+                        - JwtValidation
+
+                    # --- ORDER SERVICE ---
+                    - id: order-service-route
+                      uri: http://order.chowdeck.local:7008
+                      predicates:
+                        - Path=/api/orders/**
+                      filters:
+                        - StripPrefix=1
+                        - JwtValidation
+                    # --- SWAGGER / API DOCS ROUTES ---
+                    - id: api-docs-auth
+                      uri: http://auth.chowdeck.local:7005
+                      predicates:
+                        - Path=/api-docs/auth
+                      filters:
+                        - RewritePath=/api-docs/auth, /v3/api-docs
+
+                    - id: api-docs-order
+                      uri: http://order.chowdeck.local:7008
+                      predicates:
+                        - Path=/api-docs/order
+                      filters:
+                        - RewritePath=/api-docs/order, /v3/api-docs
+
+                    - id: api-docs-user
+                      uri: http://user.chowdeck.local:7090
+                      predicates:
+                        - Path=/api-docs/user
+                      filters:
+                        - RewritePath=/api-docs/user, /v3/api-docs
+
+                    - id: api-docs-restaurant
+                      uri: http://restaurant.chowdeck.local:7007
+                      predicates:
+                        - Path=/api-docs/restaurant
+                      filters:
+                        - RewritePath=/api-docs/restaurant, /v3/api-docs
+          httpclient:
+            connect-timeout: 10000
+            response-timeout: 90s

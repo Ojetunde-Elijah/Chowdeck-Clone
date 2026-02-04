@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "restaurant";
+
+package restaurant;
+
+message MenuItemRequest {
+  int64 item_id = 1;
+}
+
+message MenuItemResponse {
+  int64 id = 1;
+  string name = 2;
+  double price = 3;
+  bool is_available = 4;
+}
+
+service RestaurantGrpcService {
+  rpc GetMenuItem(MenuItemRequest) returns (MenuItemResponse);
+}

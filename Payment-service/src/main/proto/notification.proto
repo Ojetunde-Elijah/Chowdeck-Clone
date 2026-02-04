@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option java_package = "notification_service";
+option java_multiple_files = true;
+
+package notification;
+
+// Define the different milestones for the user
+enum NotificationType {
+  TYPE_UNSPECIFIED = 0;
+  ORDER_PLACED = 1;
+  PAYMENT_SUCCESS = 2;
+  OUT_FOR_DELIVERY = 3;
+  DELIVERED = 4;
+}
+
+message OrderNotificationRequest {
+  string user_email = 1;
+  string order_id = 2;
+  double total_amount = 3;
+  NotificationType type = 4; // New field to categorize the email
+}
+
+message NotificationResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+service NotificationInternalService {
+  rpc SendOrderEmail(OrderNotificationRequest) returns (NotificationResponse);
+}

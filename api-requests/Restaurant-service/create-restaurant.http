@@ -1,0 +1,32 @@
+POST http://Chowde-Publi-mIhb1Tu9w3FW-408573748.us-east-1.elb.amazonaws.com/api/restaurants
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvamUzNDNAdGVzdC5jb20iLCJyb2xlIjoiQ3VzdG9tIiwiaWF0IjoxNzY5OTc2MjU2LCJleHAiOjE3NzAwMTIyNTZ9.yC6rk0Amw7EygT8mVvPr9PX3CWe4pgH0ElPvV6PIoO4
+
+{
+  "name": "Chowdeck Grill",
+  "latitude": 6.5244,
+  "longitude": 3.3792,
+  "deliveryRadiusKm": 5.0,
+  "categories": [
+    {
+      "name": "Main Course",
+      "items": [
+        {
+          "name": "Jollof Rice Special",
+          "description": "Smoky jollof with grilled chicken",
+          "price": 4500.0
+        }
+      ]
+    },
+    {
+      "name": "Drinks",
+      "items": [
+        {
+          "name": "Fresh Chapman",
+          "description": "Chilled signature mocktail",
+          "price": 1500.0
+        }
+      ]
+    }
+  ]
+}

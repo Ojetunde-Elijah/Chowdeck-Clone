@@ -1,0 +1,7 @@
+{
+  "app": "C:\\\\maven\\\\bin\\\\mvn.cmd exec:java -Dexec.mainClass=\"stack.ChowdeckApp\"",
+  "context": {
+    "aws-cdk:enableDiffNoFail": "true",
+    "@aws-cdk/core:stackRelativeExports": "true"
+  }
+}
