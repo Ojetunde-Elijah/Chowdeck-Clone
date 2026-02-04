@@ -12,3 +12,6 @@ target/
 
 # Secrets (Just in case)
 .env
+
+infrastructure/cdk.out/
+**/target/
